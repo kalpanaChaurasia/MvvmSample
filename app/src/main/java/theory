@@ -1,0 +1,20 @@
+# Why do we need these patterns?
+
+Adding everything in a Single Activity or Fragment would lead to problems in testing and refactoring the code.
+Hence, the use of separation of code and clean architecture is recommended.
+
+# How does this differ from MVP?
+
+ViewModel replaces the Presenter in the Middle Layer.
+The Presenter holds references to the View. The ViewModel doesn’t.
+The Presenter updates the View using the classical way (triggering methods).
+The ViewModel sends data streams.
+The Presenter and View are in a 1 to 1 relationship.
+The View and the ViewModel are in a 1 to many relationship.
+The ViewModel does not know that the View is listening to it.
+
+
+There are two ways to implement MVVM in Android:
+
+Data Binding
+RXJava
